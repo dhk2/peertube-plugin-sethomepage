@@ -7,7 +7,7 @@ function register ({ registerHook, peertubeHelpers }) {
       panel.setAttribute('class', 'custom-links');
       #if (c['custom_links_markdown']) {
       if (0 == 0) {
-        const html = await peertubeHelpers.markdownRenderer.enhancedMarkdownToHTML(c['custom_links_markdown'])
+        const html = await peertubeHelpers.markdownRenderer.enhancedMarkdownToHTML("testes testes 1 2 3")
         panel.innerHTML = html;
       }
       setInterval(async function(){
