@@ -5,11 +5,7 @@ function register ({ registerHook, peertubeHelpers }) {
       const c = await peertubeHelpers.getSettings('custom_links_markdown')
       const panel = document.createElement('div');
       panel.setAttribute('class', 'custom-links');
-      #if (c['custom_links_markdown']) {
-      if (0 == 0) {
-        const html = await peertubeHelpers.markdownRenderer.enhancedMarkdownToHTML("testes testes 1 2 3")
-        panel.innerHTML = html;
-      }
+      panel.innerHTML = "testes tests 1. 2. 3";
       setInterval(async function(){
         if (document.querySelector('.top-menu .custom-links') === null && c['custom_links_markdown']) {
           const topMenu = document.querySelector('.top-menu');
