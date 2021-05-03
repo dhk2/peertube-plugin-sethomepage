@@ -6,15 +6,15 @@ const clientFiles = [
   'common-client-plugin.js'
 ]
 
-let config = clientFiles.map(f => ({
-  entry: "./client/" + f,
+let config = {
+  entry: "./client/common-client-plugin.js",
   output: {
     path: path.resolve(__dirname, "./dist"),
-    filename: "./" + f,
+    filename: "./common-client-plugin.js",
     library: "script",
     libraryTarget: "var"
   },
-  plugins: [ new EsmWebpackPlugin() ]
-}))
+  plugins: [new EsmWebpackPlugin()]
+}
 
 module.exports = config
